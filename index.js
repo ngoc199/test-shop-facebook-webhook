@@ -4,6 +4,15 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   app = express().use(bodyParser.json())
 
+// Handles messages events
+function handleMessage(sender_psid, received_message) {}
+
+// Handles messaging_postbacks events
+function handlePostback(sender_psid, received_postback) {}
+
+// Sends response messages via the Send API
+function callSendAPI(sender_psid, response) {}
+
 // Adds support for GET requests to webhook
 app.get("/webhook", (req, res) => {
   // My verify token. Should be a random string.
